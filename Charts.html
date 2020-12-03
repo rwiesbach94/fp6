@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 5</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+        <!-- Load c3.css -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css" rel="stylesheet">
+
+        <!-- Load d3.js and c3.js -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+
+        <script type="text/javascript" src="london.js"></script>
+
+        <style type="text/css">
+            /* Style of the Legend: adjust the values below to change the appearance of the legend pane*/
+            .legend {
+                padding: 6px 8px;
+                line-height: 18px;
+                background: rgba(255,255,255,0.9);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+
+            /* Adjust the values below to change the appearance of the legend color boxes */
+            .legend i {
+                width: 18px;
+                height: 18px;
+                float: left;
+                margin-right: 8px;
+                opacity: 0.7;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+<div id="chart"></div>
+<script type="text/javascript">
+
+var chart = c3.generate({
+  title: {
+     show: false,
+     text: 'Total Amount Of Public Housing Individual Units Per City',
+     position: 'top-center',   // top-left, top-center and top-right
+     padding: {
+       top: 20,
+       right: 20,
+       bottom: 40,
+       left: 50
+     },
+   },
+    data: {
+        columns: [
+            ['Chicago', 21001],
+            ['Paris', 109042]
+        ],
+        type: 'bar'
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        }
+        // or
+        //width: 100 // this makes bar width 100px
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+   </body>
+</html>
